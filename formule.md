@@ -48,6 +48,8 @@ $x(t)=a_0 + \sum_{n \neq 0} A_n$
 $e^{-j \pi n}=(-1)^n$
 
 #### Primeri
+$\int e^{ax} dx = \frac{e^{ax}}{a}$
+
 $\int x \cdot e^{ax} dx = \frac{x e^{ax}}{a} - \frac{e^{ax}}{a^2}$
 
 
@@ -70,3 +72,26 @@ $W = \int_{0}^T u(t) \cdot i(t) dt$
 
 ## Linearnost
 $H(a_1 x_1 + a_2 x_2) = a_1H(x_1) + a_2H(x_2)$
+
+## Laplaceova transformacija
+
+| $f(t)$ | $\mathcal{L}({f(t)})=F(s)$ |
+|:---:|:---:|
+| $1$| $\dfrac{1}{s}$|
+| $e^{at}f(t)$	| $F(s-a)$	|
+| $\mathcal{U}(t-a)$ | $\dfrac{e^{-as}}{s}$ |
+| $f(t-a)\mathcal{U}(t-a)$ | $e^{-as}F(s)$ |
+| $\delta(t)$	| 1 |
+| $\delta(t-t_0)$ | $e^{-st_0}$ |
+| $t^nf(t)$ 	| $(-1)^n\dfrac{d^nF(s)}{ds^n}$  |
+| $f'(t)$ 	| $sF(s) - f(0)$ |
+| $f^{n}(t)$ 	| $s^nF(s) - s^{(n-1)} f(0) - ... - f^{(n-1)}(0)$ |
+| $\displaystyle{\int_0^t f(x)g(t-x)dx}$ | $F(s)G(s)$ |
+| $t^n$ ($n=0,1,2,\dots$)     | $\dfrac{n!}{s^{n+1}}$    |
+| $t^x$ ($x\geq-1\in\mathbb{R}$)     | $\dfrac{\Gamma(x+1)}{s^{x+1}}$ |
+| $\sin kt$ 	| $\dfrac{k}{s^2+k^2}$ |
+| $\cos kt$ 	| $\dfrac{s}{s^2+k^2}$ |
+| $e^{at}$ 	| $\dfrac{1}{s-a}$ 	|
+| $\sinh kt$	| $\dfrac{k}{s^2-k^2}$ |
+| $\cosh kt$	| $\dfrac{s}{s^2-k^2}$ |
+| $\dfrac{e^{at}-e^{bt}}{a-b}$	| $\dfrac{1}{(s-a)(s-b)}$ |
