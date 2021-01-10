@@ -1,5 +1,4 @@
-﻿
-# Formule Zvezni signali in sistemi
+﻿# Formule Zvezni signali in sistemi
 
 ## Frekvenca
 $c = \lambda f$
@@ -31,7 +30,12 @@ $cos(n \pi) = (-1)^n$
 
 $cos(2 n \pi) = 1$
 
-$sin(n \pi)=0$ 
+$sin(n \pi)=0$
+
+#### Primeri
+$\int x \cdot cos(ax) dx = \frac{x sin(ax)}{a} + \frac{cos(ax)}{a^2}$
+
+$\int x \cdot sin(ax) dx = -\frac{x cos(ax)}{a} + \frac{sin(ax)}{a^2}$
 
 ### Eksponenta vrsta
 
@@ -42,6 +46,9 @@ $x(t)=a_0 + \sum_{n \neq 0} A_n$
 #### Zveze
 
 $e^{-j \pi n}=(-1)^n$
+
+#### Primeri
+$\int x \cdot e^{ax} dx = \frac{x e^{ax}}{a} - \frac{e^{ax}}{a^2}$
 
 
 
