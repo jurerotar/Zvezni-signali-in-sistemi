@@ -1,4 +1,5 @@
-﻿# Formule Zvezni signali in sistemi
+﻿
+# Formule Zvezni signali in sistemi
 
 ## Frekvenca
 $c = \lambda f$
@@ -33,6 +34,10 @@ $cos(2 n \pi) = 1$
 $sin(n \pi)=0$
 
 #### Primeri
+$\int  cos(ax) dx = \frac{sin(ax)}{a}$
+
+$\int  sin(ax) dx = -\frac{cos(ax)}{a}$
+
 $\int x \cdot cos(ax) dx = \frac{x sin(ax)}{a} + \frac{cos(ax)}{a^2}$
 
 $\int x \cdot sin(ax) dx = -\frac{x cos(ax)}{a} + \frac{sin(ax)}{a^2}$
@@ -51,7 +56,6 @@ $e^{-j \pi n}=(-1)^n$
 $\int e^{ax} dx = \frac{e^{ax}}{a}$
 
 $\int x \cdot e^{ax} dx = \frac{x e^{ax}}{a} - \frac{e^{ax}}{a^2}$
-
 
 
 ## Teorem o maksimalnem prenosu moči
@@ -78,20 +82,28 @@ $H(a_1 x_1 + a_2 x_2) = a_1H(x_1) + a_2H(x_2)$
 | $f(t)$ | $\mathcal{L}({f(t)})=F(s)$ |
 |:---:|:---:|
 | $1$| $\dfrac{1}{s}$|
+| $t^n$ ($n=0,1,2,\dots$)     | $\dfrac{n!}{s^{n+1}}$    |
+| $f'(t)$ 	| $sF(s) - f(0)$ |
+| $e^{at}$ 	| $\dfrac{1}{s-a}$ 	|
 | $e^{at}f(t)$	| $F(s-a)$	|
 | $\mathcal{U}(t-a)$ | $\dfrac{e^{-as}}{s}$ |
 | $f(t-a)\mathcal{U}(t-a)$ | $e^{-as}F(s)$ |
 | $\delta(t)$	| 1 |
 | $\delta(t-t_0)$ | $e^{-st_0}$ |
-| $t^nf(t)$ 	| $(-1)^n\dfrac{d^nF(s)}{ds^n}$  |
-| $f'(t)$ 	| $sF(s) - f(0)$ |
-| $f^{n}(t)$ 	| $s^nF(s) - s^{(n-1)} f(0) - ... - f^{(n-1)}(0)$ |
-| $\displaystyle{\int_0^t f(x)g(t-x)dx}$ | $F(s)G(s)$ |
-| $t^n$ ($n=0,1,2,\dots$)     | $\dfrac{n!}{s^{n+1}}$    |
-| $t^x$ ($x\geq-1\in\mathbb{R}$)     | $\dfrac{\Gamma(x+1)}{s^{x+1}}$ |
-| $\sin kt$ 	| $\dfrac{k}{s^2+k^2}$ |
-| $\cos kt$ 	| $\dfrac{s}{s^2+k^2}$ |
-| $e^{at}$ 	| $\dfrac{1}{s-a}$ 	|
-| $\sinh kt$	| $\dfrac{k}{s^2-k^2}$ |
-| $\cosh kt$	| $\dfrac{s}{s^2-k^2}$ |
-| $\dfrac{e^{at}-e^{bt}}{a-b}$	| $\dfrac{1}{(s-a)(s-b)}$ |
+| $\sin (\omega t)$ 	| $\dfrac{\omega}{s^2+\omega^2}$ |
+| $\cos (\omega t)$ 	| $\dfrac{s}{s^2+\omega^2}$ |
+
+## Delilniki
+
+### Tokovni delilnik
+$I = \frac{U_g}{R} = U_g \frac{R_1 + R_2}{R_1 \cdot R_2}$
+
+$U_g = I \cdot R_1 \cdot \frac{R_2}{R_1 + R_2}$
+
+### Napetostni delilnik
+$U_i = U_g \frac{R_i}{R_i + R_j}$
+
+## Diferencialne enačbe
+$f(t) = i_{homo}(t) + i_{parti}(t)$
+
+$x = K_1 \cdot e^{p_1} + K_2 \cdot e^{p_2}$
